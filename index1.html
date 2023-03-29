@@ -1,0 +1,184 @@
+<html>
+    <head>
+        <!--cabecera-->
+        <meta charset="UTF-8"><!--IDIOMA ESPAÑOL-->
+        <title>Proyecto Final Klaudia</title>
+        <link rel="stylesheet" href="estilo.css"/>
+        
+        <!--===============================================================================================-->	
+	       <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+       
+        <!--===============================================================================================-->
+	       <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+        <!--===============================================================================================-->
+	  
+	       <link rel="stylesheet" type="text/css" href="css/util.css">
+	       <link rel="stylesheet" type="text/css" href="css/main.css">
+        <!--===============================================================================================-->
+        
+        
+    </head>
+    <body>
+        
+        
+        <!--===============================================================================================-->	
+	 
+         <script>  
+            function enviarDatos() {
+            var nombre = document.getElementById("Nombre").value.trim();
+            var apellido = document.getElementById("Apellido").value.trim();
+            var dni = document.getElementById("Documento").value.trim();
+            var mail = document.getElementById("Email").value.trim();
+            var telefono = document.getElementById("Telefono").value.trim();
+            var localidad = document.getElementById("Localidad").value.trim();
+            var estudios = document.getElementById("Estudios").value.trim();
+            
+            if (nombre === "" || apellido === "" || dni === "" || mail === "" || telefono === "" || localidad === "" || estudios === "") {
+            alert("No puede haber campos vacíos.");
+        } else {
+            alert("Los datos fueron enviados con éxito.");
+            // Aquí puedes enviar el formulario
+         }
+        }
+   
+        </script>
+        
+        <!--===============================================================================================-->
+        
+        
+        
+         
+         <script>
+            function mensaje(){
+                alert("SUS DATOS FUERON ENVIADOS CON EXITO, MUCHAS GRACIAS");
+            }
+        </script>
+        
+        <script>
+            function loadProfilePicture(event) {
+                var file = event.target.files[0];
+            if (file.type === "image/jpeg") { // Verifica la extensión del archivo
+                var preview = document.getElementById("profile-picture-preview");
+                preview.style.display = "block";
+                preview.src = URL.createObjectURL(file);
+            } else {
+            alert("Solo se permiten imágenes en formato JPG."); // Muestra un mensaje de error
+            }
+        }
+        </script>
+
+    
+        <!--===============================================================================================-->	
+
+        <div class="limiter">
+            <div class="container-login100"><!--=========FONDO DE PANTALLA MORADO=============-->
+            <div class="wrap-login100"><!--=========COLOR BLANCO DEL FORMULARIO=============-->
+            <form >
+                
+                <h1>Ingrese sus datos de CV</h1>
+                <p>Completar el siguiente formulario</p>
+                <!--=========IMAGEN SIMBOLICA PARA PONER FOTO=============-->    
+                <div  data-tilt>
+					<img src="images/img-01.png" alt="IMG">
+				</div>
+                <!--======================================================-->
+                
+                <br>
+                <br>
+                <label for="profile-picture">Imagen de perfil:</label>
+                <br>
+                <br>    
+                <input type="file" id="profile-picture" name="profile-picture" accept="image/*" onchange="loadProfilePicture(event)" >
+       
+                
+           
+                <br>
+                <br>
+                <img id="profile-picture-preview" src="#" alt="Vista previa de la imagen de perfil" style="display: none;">
+
+
+                <!--=========ELEMENTOS PARA CARGAR TEXTO=============-->
+                    <div class="wrap-input100 validate-input" data-validate = "Nombre">
+						<input class="input100" type="text" name="Nombre" placeholder="Nombre" id="Nombre">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i><!--=========ICONO=============-->
+						</span>
+					</div>
+                
+                    <div class="wrap-input100 validate-input" data-validate = "Apellido">
+						<input class="input100" type="text" name="Apellido" placeholder="Apellido" id="Apellido">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i><!--=========ICONO=============-->
+						</span>
+					</div>
+                
+                    <div class="wrap-input100 validate-input" data-validate = "31676768">
+						<input class="input100" type="text" name="Documento" placeholder="Documento" id="Documento">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i><!--=========ICONO=============-->
+						</span>
+					</div>
+                    
+                    <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="email" placeholder="Email" id="Email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i><!--=========ICONO=============-->
+						</span>
+					</div>
+                    
+                    <div class="wrap-input100 validate-input" data-validate = "3804-333333">
+						<input class="input100" type="text" name="Telefono" placeholder="Telefono" id="Telefono">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-phone" aria-hidden="true"></i><!--=========ICONO=============-->
+						</span>
+					</div>
+                    
+                    <div class="wrap-input100 validate-input" data-validate = "Localidad">
+						<input class="input100" type="text" name="Localidad" placeholder="Localidad" id="Localidad">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-map" aria-hidden="true"></i><!--=========ICONO=============-->
+						</span>
+					</div>
+                    
+                    <div class="wrap-input100 validate-input" data-validate = "Estudios">
+						<input class="input100" type="text" name="Estudios" placeholder="Estudios" id="Estudios">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-book" aria-hidden="true"></i><!--=========ICONO=============-->
+						</span>
+					</div>
+                
+               
+                    
+                <!--===============================================================================================-->	
+                
+                
+                <div class="container-login100-form-btn" id="BotonEnviar">
+                    <input type="button" onclick="enviarDatos()" value="Enviar" class="login100-form-btn">
+                </div>
+                
+                
+                <!--===============================================================================================-->	
+            </form>
+                
+            </div>    
+            </div>     
+       </div>           
+            
+       <!--===============================================================================================-->
+       
+        
+   
+        <!--===============================================================================================-->
+        
+ 
+	  <script src="js/main.js"></script>       
+
+    </body>
+</html>
